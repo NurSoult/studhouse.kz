@@ -25,4 +25,8 @@ public class Landlords {
     @Column(name = "phone")
     private String phone;
 
+    @OneToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private Users user;
+
 }

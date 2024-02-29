@@ -19,7 +19,7 @@ public class Profiles {
     private Long id;
 
     @OneToOne
-    @Column(name = "user")
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
     private Users user;
 
     @Column(name = "bio")

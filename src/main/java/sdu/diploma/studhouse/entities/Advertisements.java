@@ -33,7 +33,7 @@ public class Advertisements {
     private String imagePaths;
 
     @ManyToOne
-    @Column(name = "author")
+    @JoinColumn(name = "author_id", referencedColumnName = "id")
     private Landlords author;
 
     @Column(name = "creation_date")
@@ -42,7 +42,18 @@ public class Advertisements {
     @Column(name = "description")
     private String description;
 
+    @Column(name = "type of house")
+    private Integer typeOfHouse;
+
+    @Column(name = "number of rooms")
+    private Integer numberOfRooms;
+
     @Column(name = "floor")
     private Integer floor;
+
+    @Column(name = "square")
+    private Integer square;
+
+
 
 }

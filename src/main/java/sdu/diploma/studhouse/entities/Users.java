@@ -23,11 +23,11 @@ public class Users {
     private String password;
 
     @ManyToOne
-    @Column(name = "role")
+    @JoinColumn(name = "role")
     private Roles role;
 
     @OneToOne
-    @Column(name = "profile")
+    @JoinColumn(name = "profile")
     private Profiles profile;
 
     @Column(name = "notification")
